@@ -1,3 +1,4 @@
+/* General */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -6,6 +7,12 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f4f4f4;
+}
+
+.header {
+    border: 5px solid black;
+    padding: 20px;
+    margin: 20px;
 }
 
 .todo-container {
@@ -25,7 +32,8 @@ input[type="text"] {
     margin-bottom: 10px;
 }
 
-button {
+/* Add Task Button */
+#add-task-button {
     padding: 10px;
     background-color: #28a745;
     color: white;
@@ -34,10 +42,11 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+#add-task-button:hover {
     background-color: #218838;
 }
 
+/* List */
 ul {
     list-style: none;
     padding: 0;
@@ -64,4 +73,18 @@ li button {
 
 li button:hover {
     background-color: #c82333;
+}
+
+/* Dark Mode Button */
+#dark-mode-button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#dark-mode-button:hover {
+    background-color: darkgray;
 }
