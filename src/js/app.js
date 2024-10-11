@@ -2,6 +2,7 @@
 const taskInput = document.getElementById('task-input');
 const addTaskBtn = document.getElementById('add-task-button');
 const taskList = document.getElementById('task-list');
+const darkModeBtn = document.getElementById('dark-mode-button');
 
 // Function to add a task
 function addTask() {
@@ -43,6 +44,10 @@ function addTask() {
     });
 }
 
+function toggleDarkMode() {
+    return;
+}
+
 // Add event listener to the 'Add Task' button
 addTaskBtn.addEventListener('click', addTask);
 
@@ -52,3 +57,6 @@ taskInput.addEventListener('keydown', (event) => {
         addTask();
     }
 });
+
+// Add event listener to the 'Dark Mode' button
+darkModeBtn.addEventListener('click', toggleDarkMode)
