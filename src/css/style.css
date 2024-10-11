@@ -6,22 +6,16 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: gray;
 }
 
 .header {
-    border: 5px solid black;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
+    height: 10vh;
+    border: 1px solid black;
+    border-radius: 5px;
     margin: 20px;
-}
-
-.todo-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
 }
 
 input[type="text"] {
@@ -30,6 +24,38 @@ input[type="text"] {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+/* Light Mode (default) */
+.light-mode {
+    background-color: white;
+    padding: 50px;
+    width: 50%;
+}
+
+.todo-container.light-mode {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: black;
+    padding: 50px;
+    width: 50%;
+}
+
+.todo-container.dark-mode {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.9);
+    width: 300px;
+    text-align: center;
 }
 
 /* Add Task Button */
