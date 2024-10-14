@@ -31,6 +31,7 @@ function addTask() {
     
     // Append the delete button to the list item
     listItem.appendChild(deleteBtn);
+    deleteBtn.setAttribute('id', 'delete-task-button')
 
     // Append the list item to the task list
     taskList.appendChild(listItem);
@@ -44,6 +45,7 @@ function addTask() {
     });
 }
 
+// Function to toggle Dark Mode
 function toggleDarkMode() {
     return;
 }
