@@ -1,70 +1,86 @@
 /* General */
 body {
+    /* Visuals */
+    background-color: #23272A;
+
+    /* Box Model */
+    margin: 0;
+
+    /* Typography */
     font-family: Arial, sans-serif;
+}
+
+/* Dark Mode (default) */
+.dark-mode h1 {
+    /* Visuals */
+    color: white;
+}
+
+
+.dark-mode .header-container {
+    /* Positioning */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: gray;
+    justify-content: flex-start;
+    gap: 50px;
+
+    /* Visuals */
+    background-color: #4A4A4A;
+    color: white;
+
+    /* Box Model */
+    padding-left: 30px;
+    font-size: 30px;
 }
 
-.header {
-    padding: 0;
-    margin: 0;
-    height: 10vh;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 20px;
+.dark-mode .todo-container {
+    /* Visuals */
+    background-color: #6D6D6D;
+
+    /* Box Model */
+    padding: 30px 30px 15px 30px;
+    margin: 30px 40% 30px 30px;
+    border-radius: 10px;
 }
 
-input[type="text"] {
+.dark-mode #task-input {
+    /* Box Model */
     padding: 10px;
-    width: 80%;
-    border: 1px solid #ddd;
+    width: 70%;
+    border: 1px solid #4A4A4A;
     border-radius: 5px;
     margin-bottom: 10px;
+    background-color: #353535;
+    color: white;
 }
 
-/* Light Mode (default) */
-.light-mode {
-    background-color: white;
-    padding: 50px;
-    width: 50%;
-}
+.dark-mode li {
+    /* Positioning */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.todo-container.light-mode {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-}
+    /* Visuals */
+    background-color: #353535;
+    color: white;
 
-/* Dark Mode */
-.dark-mode {
-    background-color: black;
-    padding: 50px;
-    width: 50%;
-}
-
-.todo-container.dark-mode {
-    background-color: black;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.9);
-    width: 300px;
-    text-align: center;
+    /* Box Model */
+    padding: 10px;
+    margin: 5px 0 5px 0;
+    border-radius: 5px;
 }
 
 /* Add Task Button */
 #add-task-button {
-    padding: 10px;
+    /* Visuals */
     background-color: #28a745;
     color: white;
+
+    /* Box Model */
+    padding: 15px;
     border: none;
     border-radius: 5px;
+
+    /* Others */
     cursor: pointer;
 }
 
@@ -72,45 +88,52 @@ input[type="text"] {
     background-color: #218838;
 }
 
+/* Light Mode (WIP) */
+
 /* List */
 ul {
-    list-style: none;
-    padding: 0;
+    /* Box Model */
+    padding-left: 0;
+    width: 75%;
 }
 
-li {
-    padding: 10px;
-    background-color: #eee;
-    margin: 5px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-}
-
-li button {
+li #delete-task-button {
+    /* Visuals */
     background-color: #dc3545;
+    color: white;
+
+    /* Box Model */
     border: none;
     padding: 5px 10px;
-    color: white;
     border-radius: 5px;
+
+    /* Others */
     cursor: pointer;
 }
 
-li button:hover {
+li #delete-task-button:hover {
+    /* Visuals */
     background-color: #c82333;
 }
 
 /* Dark Mode Button */
 #dark-mode-button {
-    padding: 10px;
-    background-color: black;
+    /* Visuals */
+    background-color: rgba(25, 25, 25, 1);
     color: white;
+
+    /* Box Model */
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
     border: none;
     border-radius: 5px;
+
+    /* Others */
     cursor: pointer;
 }
 
 #dark-mode-button:hover {
-    background-color: darkgray;
+    /* Visuals */
+    background-color: rgba(50, 50, 50, 0.75);
 }
