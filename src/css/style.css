@@ -1,67 +1,202 @@
+/* || GENERAL */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    /* Visuals */
+    background-color: #23272A;
+    /* background-color: #e0e0e0; */
+
+    /* Box Model */
     margin: 0;
-    background-color: #f4f4f4;
+
+    /* Typography */
+    font-family: Arial, sans-serif;
+}
+
+.header-container {
+    /* Positioning */
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+
+    /* Box Model */
+    padding-left: 30px;
+    font-size: 30px;
 }
 
 .todo-container {
-    background-color: white;
-    padding: 20px;
+    /* Box Model */
+    padding: 30px 30px 15px 30px;
+    margin: 30px 40% 30px 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
 }
 
-input[type="text"] {
+#task-input {
+    /* Box Model */
     padding: 10px;
-    width: 80%;
-    border: 1px solid #ddd;
+    width: 70%;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
-button {
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
 li {
-    padding: 10px;
-    background-color: #eee;
-    margin: 5px 0;
+    /* Positioning */
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    /* Box Model */
+    padding: 10px;
+    margin: 5px 0 5px 0;
     border-radius: 5px;
 }
 
-li button {
+/* || LIST */
+ul {
+    /* Box Model */
+    padding-left: 0;
+    width: 75%;
+}
+
+li #delete-task-button {
+    /* Visuals */
     background-color: #dc3545;
+    color: white;
+
+    /* Box Model */
     border: none;
     padding: 5px 10px;
-    color: white;
     border-radius: 5px;
+
+    /* Others */
     cursor: pointer;
 }
 
-li button:hover {
+li #delete-task-button:hover {
+    /* Visuals */
     background-color: #c82333;
+}
+
+/* || TOGGLE MODE BUTTON */
+#mode-button {
+    /* Box Model */
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    border: none;
+    border-radius: 5px;
+
+    /* Typography */
+    font-size: 30px;
+
+    /* Others */
+    cursor: pointer;
+}
+
+/* Toggle to Light Mode Button */
+.light-mode-button {
+    /* Visuals */
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+}
+
+.light-mode-button:hover {
+    /* Visuals */
+    background-color: rgb(199, 199, 199);
+}
+
+/* Toggle to Dark Mode Button */
+.dark-mode-button {
+    /* Visuals */
+    background-color: rgba(25, 25, 25, 1);
+    color: white;
+}
+
+.dark-mode-button:hover {
+    /* Visuals */
+    background-color: rgb(94, 94, 94);
+}
+
+/* || ADD TASK BUTTON */
+#add-task-button {
+    /* Visuals */
+    background-color: #28a745;
+    color: white;
+
+    /* Box Model */
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+
+    /* Others */
+    cursor: pointer;
+}
+
+#add-task-button:hover {
+    /* Visuals */
+    background-color: #218838;
+}
+
+/* || DARK MODE (DEFAULT) */
+.dark-mode h1 {
+    /* Visuals */
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode .header-container {
+    /* Visuals */
+    background-color: #4A4A4A;
+    color: white;
+}
+
+.dark-mode .todo-container {
+    /* Visuals */
+    background-color: #6D6D6D;
+}
+
+.dark-mode #task-input {
+    /* Visuals */
+    background-color: #353535;
+    color: white;
+
+    /* Box Model */
+    border: 1px solid #4A4A4A;
+}
+
+.dark-mode li {
+    /* Visuals */
+    background-color: #353535;
+    color: white;
+}
+
+/* ||| LIGHT MODE */
+.light-mode h1 {
+    /* Visuals */
+    color: black;
+}
+
+
+.light-mode .header-container {
+    /* Visuals */
+    background-color: #ffffffc9;
+    color: black;
+}
+
+.light-mode .todo-container {
+    /* Visuals */
+    background-color: #c5c5c5;
+}
+
+.light-mode #task-input {
+    /* Visuals */
+    background-color: #ffffff;
+    color: white;
+    border: none;
+
+    /* Box Model */
+    border: 1px solid #ffffff;
+}
+
+.light-mode li {
+    /* Visuals */
+    background-color: #ffffff;
+    color: black;
 }
