@@ -1,9 +1,14 @@
-// Get references to DOM elements
+// || REFERENCES //
+// References for task list functionality
 const taskInput = document.getElementById('task-input');
 const addTaskBtn = document.getElementById('add-task-button');
 const taskList = document.getElementById('task-list');
-const darkModeBtn = document.getElementById('dark-mode-button');
 
+// References for the toggle button
+const modeContainer = document.getElementById('mode-container');
+const modeButton = document.getElementById('mode-button');
+
+// || FUNCTIONS //
 // Function to add a task
 function addTask() {
     const taskText = taskInput.value;
@@ -17,12 +22,10 @@ function addTask() {
     // Create a new list item element
     const listItem = document.createElement('li');
 
-    // Set id of each list item in order to reference for later
+    // Set id of each list item for reference later
     listItem.setAttribute('id', 'list-item')
 
-    // Make each list item draggable for drag and drop functionality
-    listItem.setAttribute('draggable', 'true');
-
+    // Set the text of each list item to the input provided
     listItem.textContent = taskText;
 
     // Create a delete button
@@ -45,11 +48,29 @@ function addTask() {
     });
 }
 
-// Function to toggle Dark Mode
-function toggleDarkMode() {
-    return;
+// Functions to toggle Dark Mode and Light Mode
+function setBackgroundColor(hexColor) {
+    document.body.style.backgroundColor = hexColor;
 }
 
+function toggleMode() {
+    const currentMode = modeContainer.getAttribute('class');
+    if (currentMode === 'dark-mode') {
+        // Styles everything in Light Mode
+        modeContainer.setAttribute('class', 'light-mode');
+        modeButton.setAttribute('class', 'dark-mode-button');
+        modeButton.textContent='☾';
+        setBackgroundColor('#e0e0e0');
+    } else {
+        // Styles everything in Dark Mode
+        modeContainer.setAttribute('class', 'dark-mode');
+        modeButton.setAttribute('class', 'light-mode-button');
+        modeButton.textContent='☀';
+        setBackgroundColor('#23272A');
+    }
+}
+
+// || EVENT LISTENERS //
 // Add event listener to the 'Add Task' button
 addTaskBtn.addEventListener('click', addTask);
 
@@ -61,4 +82,4 @@ taskInput.addEventListener('keydown', (event) => {
 });
 
 // Add event listener to the 'Dark Mode' button
-darkModeBtn.addEventListener('click', toggleDarkMode)
+modeButton.addEventListener('click', toggleMode)
