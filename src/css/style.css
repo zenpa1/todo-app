@@ -2,7 +2,6 @@
 body {
     /* Visuals */
     background-color: #23272A;
-    /* background-color: #e0e0e0; */
 
     /* Box Model */
     margin: 0;
@@ -47,13 +46,18 @@ li {
     padding: 10px;
     margin: 5px 0 5px 0;
     border-radius: 5px;
+
+    /* Miscellaneous */
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 /* || LIST */
 ul {
     /* Box Model */
     padding-left: 0;
-    width: 75%;
+    width: 100%;
 }
 
 li #delete-task-button {
@@ -64,7 +68,9 @@ li #delete-task-button {
     /* Box Model */
     border: none;
     padding: 5px 10px;
+    margin-left: 20px;
     border-radius: 5px;
+    min-width: 65px;
 
     /* Others */
     cursor: pointer;
