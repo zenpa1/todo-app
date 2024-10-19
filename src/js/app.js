@@ -9,8 +9,11 @@ const modeContainer = document.getElementById('mode-container');
 const modeButton = document.getElementById('mode-button');
 
 // || FUNCTIONS //
-// Function to add a task
+// Functions to add a task
 function addTask() {
+    if (!validTask) {
+        return;
+    }
     const taskText = taskInput.value;
 
     // Check if the input is not empty
@@ -46,6 +49,14 @@ function addTask() {
     deleteBtn.addEventListener('click', () => {
         taskList.removeChild(listItem);
     });
+}
+
+function validTask() {
+    if (taskInput.value == '') {
+        return false;
+    }
+
+    return true;
 }
 
 // Functions to toggle Dark Mode and Light Mode
