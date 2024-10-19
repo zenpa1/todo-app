@@ -100,7 +100,7 @@ li #delete-task-button:hover {
 /* Toggle to Light Mode Button */
 .light-mode-button {
     /* Visuals */
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #e0e0e0;
     color: black;
 }
 
@@ -144,7 +144,7 @@ li #delete-task-button:hover {
 /* || DARK MODE (DEFAULT) */
 .dark-mode h1 {
     /* Visuals */
-    color: rgb(255, 255, 255);
+    color: #e0e0e0;
 }
 
 .dark-mode .header-container {
