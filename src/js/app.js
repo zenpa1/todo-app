@@ -1,7 +1,7 @@
 // || REFERENCES //
 // References for task list functionality
-const taskInput = document.getElementById('task-input');
 const addTaskBtn = document.getElementById('add-task-button');
+const taskInput = document.getElementById('task-input');
 const taskList = document.getElementById('task-list');
 
 // References for the toggle button
@@ -14,6 +14,7 @@ function addTask() {
     if (!validTask) {
         return;
     }
+
     const taskText = taskInput.value;
 
     // Check if the input is not empty
@@ -25,19 +26,34 @@ function addTask() {
     // Create a new list item element
     const listItem = document.createElement('li');
 
-    // Set id of each list item for reference later
-    listItem.setAttribute('id', 'list-item')
+    // Set class of each list item
+    listItem.setAttribute('class', 'list-item')
 
     // Set the text of each list item to the input provided
-    listItem.textContent = taskText;
+    const listContent = document.createElement('span');
+    listContent.textContent = taskText;
+    listItem.appendChild(listContent);
+
+    // Create an edit button
+    const editBtn = document.createElement('button');
+    editBtn.textContent = 'Edit';
+    editBtn.setAttribute('class', 'edit-task-button');
+    listItem.appendChild(editBtn);
+
+    // Allows editing task content
+    editBtn.addEventListener('click', (event) => {
+    const currentTaskContent = event.target.previousElementSibling;
+    const newTaskContent = prompt('Edit task:', currentTaskContent.textContent);
+    if (newTaskContent) {
+        currentTaskContent.textContent = newTaskContent;
+    }
+});
 
     // Create a delete button
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Delete';
-    
-    // Append the delete button to the list item
+    deleteBtn.setAttribute('class', 'delete-task-button');
     listItem.appendChild(deleteBtn);
-    deleteBtn.setAttribute('id', 'delete-task-button')
 
     // Append the list item to the task list
     taskList.appendChild(listItem);
